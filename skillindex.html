@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSwap - Learn, Teach & Connect</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-color: #fefefe;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar {
+      background-color: #212529;
+      padding: 1rem 2rem;
+    }
+
+    .navbar-brand {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      animation: fadeInDown 1.5s;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-top: 20px;
+      animation: fadeInUp 2s;
+    }
+
+    .section-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #333;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #2575fc;
+      margin: 20px auto 0;
+      border-radius: 2px;
+    }
+
+    .card {
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 30px;
+      background: #fff;
+    }
+
+    .info-icon {
+      font-size: 3rem;
+      color: #2575fc;
+    }
+
+    .step-card h5 {
+      margin-top: 15px;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+
+    .step-card p {
+      font-size: 1.1rem;
+    }
+
+    .btn-primary {
+      background-color: #2575fc;
+      border: none;
+      font-weight: 600;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+    }
+
+    .btn-primary:hover {
+      background-color: #6a11cb;
+    }
+
+    .form-control {
+      border-radius: 15px;
+      padding: 18px;
+      font-size: 1.1rem;
+    }
+
+    .match-section .card {
+      background-color: #fff;
+      padding: 30px;
+      font-size: 1.2rem;
+      border-radius: 20px;
+    }
+
+    .footer {
+      background-color: #212529;
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .footer a {
+      color: #00c6ff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">MatchYourIntrest</a>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="hero">
+      <h1>Discover. Connect. Grow.</h1>
+      <p>Empower your learning journey by exchanging skills with passionate people worldwide.</p>
+      <a href="#register" class="btn btn-light mt-4">Join the Community</a>
+    </div>
+
+    <section class="mt-5">
+      <h2 class="section-title">How SkillSwap Works</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card step-card">
+            <i class="fas fa-user-plus info-icon"></i>
+            <h5>Create Your Profile</h5>
+            <p>Tell us what you can teach and the skills you're eager to learn.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card step-card">
+            <i class="fas fa-random info-icon"></i>
+            <h5>Get Matched</h5>
+            <p>We connect you with learners and mentors who share your goals.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card step-card">
+            <i class="fas fa-hands-helping info-icon"></i>
+            <h5>Start Swapping</h5>
+            <p>Exchange knowledge, network, and build your skills together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="mt-5">
+      <h2 class="section-title">Register and Start Connecting</h2>
+      <form action="register.php" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="teach">Skills You Can Teach</label>
+          <input type="text" class="form-control" id="teach" name="teach" placeholder="e.g., Python, Marketing" required>
+        </div>
+        <div class="form-group">
+          <label for="learn">Skills You Want to Learn</label>
+          <input type="text" class="form-control" id="learn" name="learn" placeholder="e.g., Graphic Design, SEO" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Find My Match</button>
+      </form>
+    </section>
+
+    <section class="mt-5 match-section">
+      <h2 class="section-title">Live Skill Matches</h2>
+      <div class="card">
+        <p><strong>Riya</strong> can teach <strong>Python</strong> and wants to learn <strong>Web Development</strong>.</p>
+        <p><strong>Aman</strong> can teach <strong>Graphic Design</strong> and wants to learn <strong>Python</strong>.</p>
+        <p><strong>John</strong> can teach <strong>Photography</strong> and wants to learn <strong>Digital Marketing</strong>.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 SkillSwap | Built for passionate learners worldwide | <a href="#">Privacy Policy</a>
+  </div>
+</body>
+
+</html>
